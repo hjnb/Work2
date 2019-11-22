@@ -96,14 +96,14 @@ Partial Class TopForm
         Me.dgvWork.Location = New System.Drawing.Point(26, 84)
         Me.dgvWork.Name = "dgvWork"
         Me.dgvWork.RowTemplate.Height = 21
-        Me.dgvWork.Size = New System.Drawing.Size(1412, 517)
+        Me.dgvWork.Size = New System.Drawing.Size(1257, 517)
         Me.dgvWork.TabIndex = 1
         '
         'TopForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1615, 731)
+        Me.ClientSize = New System.Drawing.Size(1316, 623)
         Me.Controls.Add(Me.rbtnHead)
         Me.Controls.Add(Me.rbtnHelper)
         Me.Controls.Add(Me.rbtnSanato)

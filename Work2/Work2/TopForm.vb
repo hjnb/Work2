@@ -170,7 +170,7 @@
             'Y1～Y31の列
             For i As Integer = 1 To 31
                 With .Columns("Y" & i)
-                    .Width = 40
+                    .Width = 35
                     .HeaderText = i.ToString()
                     .HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
                     .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter

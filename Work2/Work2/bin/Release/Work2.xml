@@ -6,80 +6,7 @@ Work2
 </name>
 </assembly>
 <members>
-<member name="M:Work2.WorkDataGridView.ExDataGridView_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
-	<summary>
- CellPaintingイベント
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-	<remarks></remarks>
-</member><member name="M:Work2.WorkDataGridView.workDataGridView_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
-	<summary>
- 列ヘッダーマウスクリックイベント
- </summary>
-	<param name="sender"></param>
-	<param name="e"></param>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.EnableDoubleBuffering(System.Windows.Forms.Control)">
-	<summary>
- コントロールのDoubleBufferedプロパティをTrueにする
- </summary>
-	<param name="control">対象のコントロール</param>
-</member><member name="M:Work2.Util.checkDBNullValue(System.Object)">
-	<summary>
- dgvのセルの値がNullかチェック、Nullの場合空文字を返す
- </summary>
-	<param name="dgvCellValue"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.convADStrToWarekiStr(System.String)">
-	<summary>
- 西暦(yyyy/MM/dd)を和暦に変換
- </summary>
-	<param name="adStr"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.convWarekiStrToADStr(System.String)">
-	<summary>
- 和暦を西暦に変換
- </summary>
-	<param name="warekiStr"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.getKanji(System.String)">
-	<summary>
- 和暦の漢字を取得
- </summary>
-	<param name="warekiStr"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.getIniString(System.String,System.String,System.String)">
-	<summary>
- iniファイルから読み込み
- </summary>
-	<param name="lpSection">セクション名</param>
-	<param name="lpKeyName">読み込むkey名</param>
-	<param name="lpFileName">iniファイルパス</param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.putIniString(System.String,System.String,System.String,System.String)">
-	<summary>
- iniファイルへ書き込み
- </summary>
-	<param name="lpSection">セクション名</param>
-	<param name="lpKeyName">書き込む対象のkey名</param>
-	<param name="lpValue">書き込む値</param>
-	<param name="lpFileName">iniファイルパス</param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.Util.calcAge(System.String,System.String)">
-	<summary>
- 現在年齢算出
- </summary>
-	<param name="birthYmd"></param>
-	<returns></returns>
-	<remarks></remarks>
-</member><member name="M:Work2.TopForm.TopForm_Load(System.Object,System.EventArgs)">
+<member name="M:Work2.TopForm.TopForm_Load(System.Object,System.EventArgs)">
 	<summary>
  loadイベント
  </summary>
@@ -159,6 +86,20 @@ Work2
  readonly設定
  </summary>
 	<remarks></remarks>
+</member><member name="M:Work2.WorkDataGridView.ExDataGridView_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+	<summary>
+ CellPaintingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Work2.WorkDataGridView.workDataGridView_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ 列ヘッダーマウスクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
 </member><member name="P:Work2.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
@@ -172,6 +113,65 @@ Work2
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="M:Work2.Util.EnableDoubleBuffering(System.Windows.Forms.Control)">
+	<summary>
+ コントロールのDoubleBufferedプロパティをTrueにする
+ </summary>
+	<param name="control">対象のコントロール</param>
+</member><member name="M:Work2.Util.checkDBNullValue(System.Object)">
+	<summary>
+ dgvのセルの値がNullかチェック、Nullの場合空文字を返す
+ </summary>
+	<param name="dgvCellValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Work2.Util.convADStrToWarekiStr(System.String)">
+	<summary>
+ 西暦(yyyy/MM/dd)を和暦に変換
+ </summary>
+	<param name="adStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Work2.Util.convWarekiStrToADStr(System.String)">
+	<summary>
+ 和暦を西暦に変換
+ </summary>
+	<param name="warekiStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Work2.Util.getKanji(System.String)">
+	<summary>
+ 和暦の漢字を取得
+ </summary>
+	<param name="warekiStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Work2.Util.getIniString(System.String,System.String,System.String)">
+	<summary>
+ iniファイルから読み込み
+ </summary>
+	<param name="lpSection">セクション名</param>
+	<param name="lpKeyName">読み込むkey名</param>
+	<param name="lpFileName">iniファイルパス</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Work2.Util.putIniString(System.String,System.String,System.String,System.String)">
+	<summary>
+ iniファイルへ書き込み
+ </summary>
+	<param name="lpSection">セクション名</param>
+	<param name="lpKeyName">書き込む対象のkey名</param>
+	<param name="lpValue">書き込む値</param>
+	<param name="lpFileName">iniファイルパス</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Work2.Util.calcAge(System.String,System.String)">
+	<summary>
+ 現在年齢算出
+ </summary>
+	<param name="birthYmd"></param>
+	<returns></returns>
+	<remarks></remarks>
 </member>
 </members>
 </doc>
