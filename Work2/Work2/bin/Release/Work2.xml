@@ -172,6 +172,14 @@ Work2
 	<param name="birthYmd"></param>
 	<returns></returns>
 	<remarks></remarks>
+</member><member name="M:Work2.Util.getTermString(System.String,System.String)">
+	<summary>
+ Term.txtから読み込み
+ </summary>
+	<param name="keyName">key名</param>
+	<param name="termFilePath">ファイルパス</param>
+	<returns></returns>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

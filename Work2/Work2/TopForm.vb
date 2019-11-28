@@ -18,7 +18,7 @@
     Private dayCharArray() As String = {"日", "月", "火", "水", "木", "金", "土"}
 
     '入力可能行数（勤務入力部分）
-    Private Const INPUT_ROW_COUNT As Integer = 50
+    Private Const INPUT_ROW_COUNT As Integer = 100
 
     '勤務データ表示用フラグ
     Private canDisplayWork As Boolean = False
@@ -34,6 +34,9 @@
 
     '表示月の月の日数保持用
     Private daysInMonth As Integer
+
+    '表示変更用
+    Private termWork2 As String = Util.getTermString("Work2", "C:\Term\Term.txt")
 
     ''' <summary>
     ''' loadイベント
@@ -73,11 +76,16 @@
         ymBox.setADStr(Today.ToString("yyyy/MM/01"))
         canDisplayWork = True
 
-        '勤務データ表示
-        displayWork()
-
         '初期フォーカス位置
         ymBox.setFocus(4)
+
+        '勤務データ表示
+        If termWork2 = "1" Then
+            rbtnByoto.Visible = True
+            rbtnByoto.Checked = True
+        Else
+            displayWork()
+        End If
     End Sub
 
     ''' <summary>
@@ -392,6 +400,9 @@
         cnn.Open(DB_Work2)
         Dim rs As New ADODB.Recordset
         Dim sql = "SELECT * FROM KHyo WHERE Ym='" & ym & "' and Hyo = '" & hyo & "' order by Seq"
+        If rbtnByoto.Checked Then
+            sql = "select * from KHyo where Ym='" & ym & "' and (Hyo='一般' or Hyo='療養' or Hyo='助手' or Hyo='師長') order by Hyo='一般', Hyo='療養', Hyo='助手', Hyo='師長', Seq"
+        End If
         rs.Open(sql, cnn, ADODB.CursorTypeEnum.adOpenKeyset, ADODB.LockTypeEnum.adLockPessimistic)
         If rs.RecordCount <= 0 Then
             '当月データが無い場合
@@ -458,7 +469,7 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub rbtnType_CheckedChanged(sender As Object, e As System.EventArgs) Handles rbtnNurse.CheckedChanged, rbtnSanato.CheckedChanged, rbtnHelper.CheckedChanged, rbtnHead.CheckedChanged
+    Private Sub rbtnType_CheckedChanged(sender As Object, e As System.EventArgs) Handles rbtnNurse.CheckedChanged, rbtnSanato.CheckedChanged, rbtnHelper.CheckedChanged, rbtnHead.CheckedChanged, rbtnByoto.CheckedChanged
         Dim rbtn As RadioButton = DirectCast(sender, RadioButton)
         If rbtn.Checked AndAlso canDisplayWork Then
             displayWork()

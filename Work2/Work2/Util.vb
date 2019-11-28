@@ -246,6 +246,39 @@ Public Class Util
         End If
         Return age
     End Function
+
+    ''' <summary>
+    ''' Term.txtから読み込み
+    ''' </summary>
+    ''' <param name="keyName">key名</param>
+    ''' <param name="termFilePath">ファイルパス</param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function getTermString(keyName As String, termFilePath As String) As String
+        If Not System.IO.File.Exists(termFilePath) Then
+            Return ""
+        End If
+
+        'テキストから1行ずつ読み込み
+        Dim dic As New Dictionary(Of String, String)
+        Dim sr As New System.IO.StreamReader(termFilePath, System.Text.Encoding.Default)
+        While (sr.Peek() >= 0)
+            Dim readStr As String = sr.ReadLine()
+            If Not System.Text.RegularExpressions.Regex.IsMatch(readStr, "^[^=]+=[^=]+$") Then
+                Continue While
+            End If
+            Dim key As String = readStr.Split("=")(0)
+            Dim val As String = readStr.Split("=")(1)
+            dic.Add(key, val)
+        End While
+        sr.Close()
+
+        If dic.ContainsKey(keyName) Then
+            Return dic(keyName)
+        Else
+            Return ""
+        End If
+    End Function
 End Class
 
 

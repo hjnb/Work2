@@ -28,6 +28,7 @@ Partial Class TopForm
         Me.rbtnHelper = New System.Windows.Forms.RadioButton()
         Me.rbtnSanato = New System.Windows.Forms.RadioButton()
         Me.rbtnNurse = New System.Windows.Forms.RadioButton()
+        Me.rbtnByoto = New System.Windows.Forms.RadioButton()
         Me.dgvWork = New Work2.WorkDataGridView(Me.components)
         CType(Me.dgvWork, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,6 +91,18 @@ Partial Class TopForm
         Me.rbtnNurse.Text = "一般"
         Me.rbtnNurse.UseVisualStyleBackColor = True
         '
+        'rbtnByoto
+        '
+        Me.rbtnByoto.AutoSize = True
+        Me.rbtnByoto.Location = New System.Drawing.Point(309, 21)
+        Me.rbtnByoto.Name = "rbtnByoto"
+        Me.rbtnByoto.Size = New System.Drawing.Size(47, 16)
+        Me.rbtnByoto.TabIndex = 11
+        Me.rbtnByoto.TabStop = True
+        Me.rbtnByoto.Text = "病棟"
+        Me.rbtnByoto.UseVisualStyleBackColor = True
+        Me.rbtnByoto.Visible = False
+        '
         'dgvWork
         '
         Me.dgvWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -104,6 +117,7 @@ Partial Class TopForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1316, 623)
+        Me.Controls.Add(Me.rbtnByoto)
         Me.Controls.Add(Me.rbtnHead)
         Me.Controls.Add(Me.rbtnHelper)
         Me.Controls.Add(Me.rbtnSanato)
@@ -123,5 +137,6 @@ Partial Class TopForm
     Friend WithEvents rbtnHelper As System.Windows.Forms.RadioButton
     Friend WithEvents rbtnSanato As System.Windows.Forms.RadioButton
     Friend WithEvents rbtnNurse As System.Windows.Forms.RadioButton
+    Friend WithEvents rbtnByoto As System.Windows.Forms.RadioButton
 
 End Class
